@@ -56,7 +56,7 @@ class Pharmacy:
 
     def sort_by_price(self, medicine):
         """
-        Returns all medicine sorrted by price
+        Returns all medicine sorted by price
         """
         return medicine.price
 
@@ -78,17 +78,17 @@ class Pharmacy:
         inventory_str = "\n".join([f'{medicine.name} - Price: {medicine.price}, '
                                    f'Quantity: {medicine.quantity}'
                                    for medicine in self.inventory])
-        return f"Pharmacy Inventory:\n{inventory_str}"
+        return f"Pharmacy Inventory: \n{inventory_str}"
 
 
-medicine1 = Medicine("Paracetamol", 20.0, 100, False, datetime(2023, 12, 31))
-medicine2 = Medicine("Aspirin", 15.0, 50, True, datetime(2027, 6, 30))
-medicine3 = Medicine("Ibuprofen", 30.0, 80, False, datetime(2023, 8, 15))
+paracetamol = Medicine("Paracetamol", 20.0, 100, False, datetime(2023, 12, 31))
+aspirin = Medicine("Aspirin", 15.0, 50, True, datetime(2027, 6, 30))
+ibuprofen = Medicine("Ibuprofen", 30.0, 80, False, datetime(2023, 8, 15))
 
 pharmacy = Pharmacy()
-pharmacy.add_medicine(medicine1)
-pharmacy.add_medicine(medicine2)
-pharmacy.add_medicine(medicine3)
+pharmacy.add_medicine(paracetamol)
+pharmacy.add_medicine(aspirin)
+pharmacy.add_medicine(ibuprofen)
 print(pharmacy)
 
 pharmacy.remove_expired_medicines()
